@@ -1,0 +1,65 @@
+@import 'partials/base';
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    &__title {
+        color: $primary;
+        font-size: 5rem;
+        font-weight: bold;
+        padding: 1rem 3rem;
+    }
+    
+    &__subtitle {
+        color: $dark;
+        font-size: 1.5rem;
+        padding: 0 3rem 3rem 0;
+    }
+
+    &__timer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        &--days, &--hours, &--minutes, &--seconds {
+            padding: 2rem 1rem;
+            text-align: center;
+            background-color: $light;
+            border-radius: 20px;
+            margin: 0 6px;
+            width: 8rem;
+        }
+
+        .day, .hour, .minute, .second {
+            font-size: 2rem;
+        }
+    }
+
+    &__img {
+        height: 50vh;
+        img {
+            height: 100%;
+        }
+    }
+
+    &__footer {
+        width: 100vw;
+        height: 3rem;
+        background-color: $light;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position:fixed;
+        bottom: 0;
+        align-items: center;
+        
+        p {
+            color: $dark;
+            font-weight: bold;
+        }
+    }
+}
